@@ -1,4 +1,4 @@
-package com.gs.core
+package com.gs.test
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
