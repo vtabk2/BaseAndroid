@@ -1,4 +1,4 @@
-package com.gs.core.utils.livedata
+package com.gs.core.utils.network
 
 import android.annotation.SuppressLint
 import android.content.Context
