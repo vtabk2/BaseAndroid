@@ -1,5 +1,8 @@
 package com.gs.core.utils
 
+import android.os.Environment
+import java.io.File
+
 object CoreConstant {
     const val ELEVATION_RANK_1 = 10f
     const val ELEVATION_RANK_2 = 12f
@@ -7,4 +10,7 @@ object CoreConstant {
     const val ELEVATION_RANK_4 = 16f
 
     const val LIMIT_LOADED = 100
+
+    const val CAMERA_FOLDER = "Camera"
+    var CAMERA_FOLDER_PATH = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).absolutePath + File.separator + CAMERA_FOLDER
 }
