@@ -18,3 +18,19 @@ dependencies {
 	        implementation 'com.github.vtabk2:BaseAndroid:1.0.1'
 	}
 ```
+
+**Hướng dẫn**
+
+- LiveDataUntil : tác dụng là không load hết data mà sẽ chỉ load trước 1 phần để hiển thị nhanh hơn
+
+```css
+  viewModel.listLiveData.observeUntil(owner = viewLifecycleOwner,
+  predicate = {
+  it.size > 0
+  },
+  observer = { list ->
+  if (list.isEmpty()) return@observeUntil
+  // load data list nhanh hơn  bằng cách load trước 1 ít
+  )
+```
+- LiveDataNetworkStatus : tác dụng kiểm tra sự thay đổi trạng thái kết nối mạng (tắt, bật mạng)
