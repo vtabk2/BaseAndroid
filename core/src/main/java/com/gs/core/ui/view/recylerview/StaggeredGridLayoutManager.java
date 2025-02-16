@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.gs.core.ui.recylerview;
+package com.gs.core.ui.view.recylerview;
 
 import static androidx.annotation.RestrictTo.Scope.LIBRARY;
 
