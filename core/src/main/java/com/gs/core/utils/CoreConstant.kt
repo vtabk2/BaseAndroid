@@ -13,4 +13,7 @@ object CoreConstant {
 
     const val CAMERA_FOLDER = "Camera"
     var CAMERA_FOLDER_PATH = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).absolutePath + File.separator + CAMERA_FOLDER
+
+    const val GOOGLE_PHOTOS = "Google Photos"
+    const val GOOGLE_PHOTOS_PACKAGE_NAME = "com.google.android.apps.photos"
 }
