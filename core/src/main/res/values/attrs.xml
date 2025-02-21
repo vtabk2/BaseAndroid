@@ -89,4 +89,20 @@
         <!-- 	starts progress animation from the previous progressed value or not. -->
         <attr name="progressView_progressFromPrevious" format="boolean"/>
     </declare-styleable>
+
+    <declare-styleable name="BaseNativeAdView">
+        <attr name="ads_mode" format="enum">
+            <enum name="album" value="0"/>
+            <enum name="font" value="1"/>
+            <enum name="template" value="2"/>
+            <enum name="sticker" value="3"/>
+            <enum name="frame" value="4"/>
+            <enum name="language" value="5"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="AspectRatioLayout">
+        <attr name="widthToHeight" format="float"/>
+        <attr name="heightToWidth" format="float"/>
+    </declare-styleable>
 </resources>

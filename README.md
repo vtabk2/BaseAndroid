@@ -35,6 +35,7 @@ dependencies {
 ```
 - LiveDataNetworkStatus : tác dụng kiểm tra sự thay đổi trạng thái kết nối mạng (tắt, bật mạng)
 
+- launchWhenResumed : check activity có còn khi resume không
 ```css
 launchWhenResumed {
     // todo
