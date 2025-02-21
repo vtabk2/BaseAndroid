@@ -3,11 +3,11 @@ package com.gs.core.admob.natives.view
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.RatingBar
 import androidx.appcompat.widget.AppCompatTextView
+import com.facebook.shimmer.ShimmerFrameLayout
 import com.google.android.gms.ads.nativead.MediaView
 import com.google.android.gms.ads.nativead.NativeAd
 import com.google.android.gms.ads.nativead.NativeAdView
@@ -28,6 +28,7 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
     abstract val callActionButtonView: AppCompatTextView?
     abstract val adView: NativeAdView?
     abstract val mediaView: MediaView?
+    abstract val shimmerView: ShimmerFrameLayout?
 
     private var nativeAd: NativeAd? = null
     var adsMode = AdsMode.ALBUM
@@ -40,7 +41,14 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
         }
     }
 
-    open fun setNativeAd(nativeAd: NativeAd) {
+    open fun setNativeAd(nativeAd: NativeAd?) {
+        stopShimmer()
+        if (nativeAd == null) {
+            gone()
+            return
+        }
+        visible()
+
         val icon = nativeAd.icon
         val title = nativeAd.headline
         val callAction = nativeAd.callToAction
@@ -98,5 +106,15 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
 
     fun destroy() {
         nativeAd?.destroy()
+    }
+
+    fun startShimmer() {
+        shimmerView?.visible()
+        shimmerView?.startShimmer()
+    }
+
+    fun stopShimmer() {
+        shimmerView?.hideShimmer()
+        shimmerView?.gone()
     }
 }

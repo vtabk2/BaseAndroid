@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.widget.ImageView
 import android.widget.RatingBar
 import androidx.appcompat.widget.AppCompatTextView
+import com.facebook.shimmer.ShimmerFrameLayout
 import com.google.android.gms.ads.nativead.MediaView
 import com.google.android.gms.ads.nativead.NativeAdView
 import com.gs.core.admob.natives.AdsMode
@@ -66,6 +67,8 @@ class NativeAdSmallView(context: Context, attrs: AttributeSet? = null) : BaseNat
     }
 
     override val mediaView: MediaView? = null
+
+    override val shimmerView: ShimmerFrameLayout? = null
 
     init {
         when (adsMode) {

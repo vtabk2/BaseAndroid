@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.widget.ImageView
 import android.widget.RatingBar
 import androidx.appcompat.widget.AppCompatTextView
+import com.facebook.shimmer.ShimmerFrameLayout
 import com.google.android.gms.ads.nativead.MediaView
 import com.google.android.gms.ads.nativead.NativeAdView
 import com.gs.core.admob.natives.AdsMode
@@ -79,6 +80,13 @@ class NativeAdMediumView(context: Context, attrs: AttributeSet? = null) : BaseNa
             AdsMode.FRAME -> adNativeMediumFrameBinding?.adMediaFrame
             AdsMode.LANGUAGE -> adNativeMediumLanguageBinding?.adMediaLanguage
             else -> adNativeMediumShareBinding?.adMediaShare
+        }
+    }
+
+    override val shimmerView: ShimmerFrameLayout? by lazy {
+        when (adsMode) {
+            AdsMode.FRAME -> adNativeMediumFrameBinding?.frameShimmer?.adViewFrameShimmer
+            else -> null
         }
     }
 

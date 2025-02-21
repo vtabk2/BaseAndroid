@@ -9,10 +9,11 @@ import com.gs.core.R
 import com.gs.core.utils.extensions.launchWhenResumed
 
 object NativeUtils {
-    fun loadNativeAds(lifecycleOwner: LifecycleOwner, activity: Activity, nativeId: Int = R.string.native_id, isVip: Boolean, callback: (nativeAd: NativeAd?) -> Unit) {
+    fun loadNativeAds(lifecycleOwner: LifecycleOwner, activity: Activity, nativeId: Int = R.string.native_id, isVip: Boolean, callbackStart: () -> Unit, callback: (nativeAd: NativeAd?) -> Unit) {
         lifecycleOwner.launchWhenResumed {
             if (!isVip) {
                 try {
+                    callbackStart.invoke()
                     val adLoader = AdLoader.Builder(activity, activity.getString(nativeId)).forNativeAd { nativeAd ->
                         // If this callback occurs after the activity is destroyed, you
                         // must call destroy and return or you may get a memory leak.

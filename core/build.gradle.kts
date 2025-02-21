@@ -53,4 +53,5 @@ dependencies {
 
     // admob
     implementation(libs.play.services.ads)
+    implementation(libs.shimmer)
 }
