@@ -91,10 +91,10 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/ad_call_to_action_sticker"
                 android:layout_width="wrap_content"
-                android:layout_height="32dp"
+                android:layout_height="@dimen/ads_height_call_to_action_sticker"
                 android:layout_marginHorizontal="7dp"
                 android:layout_marginBottom="7dp"
-                android:background="@drawable/ads_selector_bg_call_action_button_sticker"
+                android:background="@drawable/ads_bg_call_action_button_sticker"
                 android:gravity="center"
                 android:lineSpacingExtra="5dp"
                 android:minWidth="96dp"

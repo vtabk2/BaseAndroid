@@ -27,10 +27,10 @@
     <dimen name="ads_text_size_attribution_frame">8sp</dimen>
     <dimen name="ads_text_size_call_to_action_frame">14sp</dimen>
     <dimen name="ads_height_call_to_action_frame">32dp</dimen>
-    <dimen name="ads_radius_call_to_action_frame">20dp</dimen>
+    <dimen name="ads_radius_call_to_action_frame">10dp</dimen>
     <dimen name="ads_padding_bottom_call_to_action_frame">6dp</dimen>
-    <dimen name="ads_padding_left_bottom_call_to_action_frame">6dp</dimen>
-    <dimen name="ads_padding_right_bottom_call_to_action_frame">6dp</dimen>
+    <dimen name="ads_padding_left_bottom_call_to_action_frame">10dp</dimen>
+    <dimen name="ads_padding_right_bottom_call_to_action_frame">10dp</dimen>
     <dimen name="ads_padding_top_bottom_call_to_action_frame">6dp</dimen>
 
     // language
@@ -61,20 +61,46 @@
     <color name="ads_text_color_body_share">@android:color/white</color>
     <color name="ads_text_color_attribution_share">@android:color/white</color>
     <color name="ads_text_color_call_button_share">@color/selector_color_white_black</color>
+    <color name="ads_call_button_share">#14B261</color>
+    <color name="ads_call_button_share_pressed">#DFE1E6</color>
+
+    <drawable name="ads_bg_call_action_button_share">
+        @drawable/ads_selector_bg_call_action_button_share
+    </drawable>
+
     <dimen name="ads_text_size_headline_share">15sp</dimen>
     <dimen name="ads_text_size_body_share">13sp</dimen>
     <dimen name="ads_text_size_attribution_share">8sp</dimen>
     <dimen name="ads_text_size_call_to_action_share">14sp</dimen>
+    <dimen name="ads_height_call_to_action_share">36dp</dimen>
+    <dimen name="ads_radius_call_to_action_share">10dp</dimen>
+    <dimen name="ads_padding_bottom_call_to_action_share">6dp</dimen>
+    <dimen name="ads_padding_left_call_to_action_share">10dp</dimen>
+    <dimen name="ads_padding_right_call_to_action_share">10dp</dimen>
+    <dimen name="ads_padding_top_call_to_action_share">6dp</dimen>
 
     // sticker
     <color name="ads_text_color_headline_sticker">@android:color/white</color>
     <color name="ads_text_color_body_sticker">@android:color/white</color>
     <color name="ads_text_color_attribution_sticker">@android:color/white</color>
     <color name="ads_text_color_call_button_sticker">@color/selector_color_white_black</color>
+    <color name="ads_call_button_sticker">#4088F4</color>
+    <color name="ads_call_button_sticker_pressed">#DFE1E6</color>
+
+    <drawable name="ads_bg_call_action_button_sticker">
+        @drawable/ads_selector_bg_call_action_button_sticker
+    </drawable>
+
     <dimen name="ads_text_size_headline_sticker">15sp</dimen>
     <dimen name="ads_text_size_body_sticker">12sp</dimen>
     <dimen name="ads_text_size_attribution_sticker">8sp</dimen>
     <dimen name="ads_text_size_call_to_action_sticker">13sp</dimen>
+    <dimen name="ads_height_call_to_action_sticker">32dp</dimen>
+    <dimen name="ads_radius_call_to_action_sticker">10dp</dimen>
+    <dimen name="ads_padding_bottom_call_to_action_sticker">6dp</dimen>
+    <dimen name="ads_padding_left_call_to_action_sticker">10dp</dimen>
+    <dimen name="ads_padding_right_call_to_action_sticker">10dp</dimen>
+    <dimen name="ads_padding_top_call_to_action_sticker">6dp</dimen>
 
     // album
     <color name="ads_text_color_headline_album">@android:color/white</color>
