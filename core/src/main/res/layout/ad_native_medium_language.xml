@@ -95,11 +95,11 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/ad_call_to_action_language"
             android:layout_width="0dp"
-            android:layout_height="48dp"
+            android:layout_height="@dimen/ads_height_call_to_action_language"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="11dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/ads_selector_bg_call_action_button_language"
+            android:background="@drawable/ads_bg_call_action_button_language"
             android:ellipsize="end"
             android:gravity="center"
             android:lineSpacingExtra="5dp"

@@ -2,17 +2,25 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
         <shape>
-            <corners android:radius="10dp"/>
-            <padding android:bottom="6dp" android:left="10dp" android:right="10dp" android:top="6dp"/>
-            <solid android:color="#DFE1E6"/>
+            <corners android:radius="@dimen/ads_radius_call_to_action_language"/>
+            <padding
+                android:bottom="@dimen/ads_padding_bottom_call_to_action_language"
+                android:left="@dimen/ads_padding_left_call_to_action_language"
+                android:right="@dimen/ads_padding_left_call_to_action_language"
+                android:top="@dimen/ads_padding_top_call_to_action_language"/>
+            <solid android:color="@color/ads_call_button_language_pressed"/>
         </shape>
     </item>
 
     <item>
         <shape>
-            <corners android:radius="10dp"/>
-            <padding android:bottom="6dp" android:left="10dp" android:right="10dp" android:top="6dp"/>
-            <solid android:color="#14B261"/>
+            <corners android:radius="@dimen/ads_radius_call_to_action_language"/>
+            <padding
+                android:bottom="@dimen/ads_padding_bottom_call_to_action_language"
+                android:left="@dimen/ads_padding_left_call_to_action_language"
+                android:right="@dimen/ads_padding_right_call_to_action_language"
+                android:top="@dimen/ads_padding_top_call_to_action_language"/>
+            <solid android:color="@color/ads_call_button_language"/>
         </shape>
     </item>
 </selector>
