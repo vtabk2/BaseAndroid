@@ -10,16 +10,16 @@
     <string name="native_id" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
     <string name="native_language" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
 
-    <style name="RatingBar" parent="Theme.AppCompat">
+    <color name="ads_selector_text_color_call_button_frame">@color/selector_color_white_black</color>
+    <color name="ads_selector_text_color_call_button_language">@color/selector_color_white_black</color>
+    <color name="ads_selector_text_color_call_button_share">@color/selector_color_white_black</color>
+    <color name="ads_selector_text_color_call_button_sticker">@color/selector_color_white_black</color>
+    <color name="ads_selector_text_color_call_button_album">@color/selector_color_white_black</color>
+    <color name="ads_selector_text_color_call_button_font">@color/selector_color_white_black</color>
+    <color name="ads_selector_text_color_call_button_template">@color/selector_color_white_black</color>
+
+    <style name="adsRatingBar" parent="Theme.AppCompat">
         <item name="colorControlNormal">#FFBF1C</item>
         <item name="colorControlActivated">#FFBF1C</item>
     </style>
-
-    <color name="selector_color_call_button_frame">@color/selector_color_white_black</color>
-    <color name="selector_color_call_button_language">@color/selector_color_white_black</color>
-    <color name="selector_color_call_button_share">@color/selector_color_white_black</color>
-    <color name="selector_color_call_button_sticker">@color/selector_color_white_black</color>
-    <color name="selector_color_call_button_album">@color/selector_color_white_black</color>
-    <color name="selector_color_call_button_font">@color/selector_color_white_black</color>
-    <color name="selector_color_call_button_template">@color/selector_color_white_black</color>
 </resources>

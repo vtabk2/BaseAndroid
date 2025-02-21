@@ -55,7 +55,7 @@
                 android:isIndicator="true"
                 android:numStars="5"
                 android:stepSize="0.5"
-                android:theme="@style/RatingBar"
+                android:theme="@style/adsRatingBar"
                 app:layout_constraintBottom_toBottomOf="@id/ad_attribution_font"
                 app:layout_constraintStart_toEndOf="@id/ad_attribution_font"
                 app:layout_constraintTop_toTopOf="@id/ad_attribution_font"/>
@@ -82,7 +82,7 @@
                 android:gravity="center"
                 android:lineSpacingExtra="5dp"
                 android:minWidth="96dp"
-                android:textColor="@color/selector_color_call_button_font"
+                android:textColor="@color/ads_selector_text_color_call_button_font"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
