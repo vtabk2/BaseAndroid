@@ -83,7 +83,7 @@
                 android:gravity="center"
                 android:lineSpacingExtra="5dp"
                 android:minWidth="96dp"
-                android:textColor="@color/ads_selector_text_color_call_button_template"
+                android:textColor="@color/ads_text_color_call_button_template"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

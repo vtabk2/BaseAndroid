@@ -78,7 +78,7 @@
             android:includeFontPadding="false"
             android:maxLines="1"
             android:textAllCaps="true"
-            android:textColor="@color/ads_selector_text_color_call_button_album"
+            android:textColor="@color/ads_text_color_call_button_album"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

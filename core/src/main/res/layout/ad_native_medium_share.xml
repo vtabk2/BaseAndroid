@@ -99,7 +99,7 @@
             android:background="@drawable/ads_selector_bg_call_action_button_share"
             android:gravity="center"
             android:lineSpacingExtra="5dp"
-            android:textColor="@color/ads_selector_text_color_call_button_share"
+            android:textColor="@color/ads_text_color_call_button_share"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
