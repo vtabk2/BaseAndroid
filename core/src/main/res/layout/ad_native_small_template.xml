@@ -38,8 +38,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:textAlignment="viewStart"
-                android:textColor="@android:color/black"
-                android:textSize="15sp"
+                android:textColor="@color/ads_text_color_headline_template"
+                android:textSize="@dimen/ads_text_size_headline_template"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/ad_call_to_action_template"
                 app:layout_constraintStart_toEndOf="@id/ad_app_icon_template"
@@ -69,8 +69,8 @@
                 android:background="@drawable/ads_bg_text_ad_template"
                 android:includeFontPadding="false"
                 android:text="AD"
-                android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textColor="@color/ads_text_color_attribution_template"
+                android:textSize="@dimen/ads_text_size_attribution_template"
                 app:layout_constraintStart_toStartOf="@id/ad_headline_template"
                 app:layout_constraintTop_toBottomOf="@id/ad_headline_template"/>
 
@@ -84,7 +84,7 @@
                 android:lineSpacingExtra="5dp"
                 android:minWidth="96dp"
                 android:textColor="@color/ads_text_color_call_button_template"
-                android:textSize="14sp"
+                android:textSize="@dimen/ads_text_size_call_to_action_template"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>

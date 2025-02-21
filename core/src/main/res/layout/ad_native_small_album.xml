@@ -30,8 +30,8 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:textAlignment="viewStart"
-            android:textColor="@android:color/white"
-            android:textSize="15sp"
+            android:textColor="@color/ads_text_color_headline_album"
+            android:textSize="@dimen/ads_text_size_headline_album"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/ad_attribution_album"
             app:layout_constraintEnd_toEndOf="@id/ad_call_to_action_album"
@@ -60,8 +60,8 @@
             android:background="@drawable/bg_text_ad_album"
             android:includeFontPadding="false"
             android:text="AD"
-            android:textColor="@android:color/white"
-            android:textSize="8sp"
+            android:textColor="@color/ads_text_color_attribution_album"
+            android:textSize="@dimen/ads_text_size_attribution_album"
             app:layout_constraintBottom_toTopOf="@id/ad_call_to_action_album"
             app:layout_constraintStart_toStartOf="@id/ad_call_to_action_album"/>
 
@@ -79,7 +79,7 @@
             android:maxLines="1"
             android:textAllCaps="true"
             android:textColor="@color/ads_text_color_call_button_album"
-            android:textSize="12sp"
+            android:textSize="@dimen/ads_text_size_call_to_action_album"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ad_app_icon_album"/>
