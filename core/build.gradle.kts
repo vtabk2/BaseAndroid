@@ -50,4 +50,7 @@ dependencies {
 
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.transitionseverywhere)
+
+    // admob
+    implementation(libs.play.services.ads)
 }
