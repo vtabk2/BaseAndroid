@@ -15,7 +15,7 @@ dependencyResolutionManagement {
 **Step 2.** Add the dependency
 ```css
 dependencies {
-	        implementation 'com.github.vtabk2:BaseAndroid:1.0.4'
+	        implementation 'com.github.vtabk2:BaseAndroid:1.0.5'
 	}
 ```
 
@@ -41,3 +41,8 @@ launchWhenResumed {
     // todo
 }
 ```
+- admob : cấu hình trong config_admob
+- BannerUtils
+- InterstitialUtils
+- NativeUtils
+- RewardedInterstitialUtils
