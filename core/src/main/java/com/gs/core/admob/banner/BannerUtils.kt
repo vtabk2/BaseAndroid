@@ -3,17 +3,20 @@ package com.gs.core.admob.banner
 import android.app.Activity
 import android.content.Context
 import android.os.Build
+import android.os.Bundle
 import android.view.Gravity
-import android.view.View
 import android.view.ViewGroup
 import android.view.WindowMetrics
 import android.widget.FrameLayout
+import com.google.ads.mediation.admob.AdMobAdapter
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.LoadAdError
 import com.gs.core.R
+import com.gs.core.utils.extensions.gone
+import com.gs.core.utils.extensions.visible
 
 object BannerUtils {
 
@@ -24,13 +27,14 @@ object BannerUtils {
         adUnitId: Int = R.string.banner_id,
         show: Boolean = true,
         alwaysShow: Boolean = false,
+        isCollapsible: Boolean = false,
         callbackShow: (() -> Unit)? = null,
         callbackAdMob: (AdView) -> Unit
     ) {
         flBannerAds.removeAllViews()
         if (isVip) {
             if (!alwaysShow) {
-                flBannerAds.visibility = View.GONE
+                flBannerAds.gone()
             }
             return
         }
@@ -45,19 +49,29 @@ object BannerUtils {
         flBannerAds.addView(bannerAds, params)
         val adSize = getAdSize(activity)
         bannerAds.setAdSize(adSize)
-        val adRequest = AdRequest.Builder().setHttpTimeoutMillis(5000).build()
+
+        // Create an extra parameter that aligns the bottom of the expanded ad to
+        // the bottom of the bannerView.
+        val extras = Bundle()
+        if (isCollapsible) {
+            extras.putString("collapsible", "bottom")
+        }
+        val adRequest = AdRequest.Builder()
+            .addNetworkExtrasBundle(AdMobAdapter::class.java, extras)
+            .setHttpTimeoutMillis(5000)
+            .build()
         bannerAds.loadAd(adRequest)
         bannerAds.adListener = object : AdListener() {
             override fun onAdLoaded() {
                 if (show) {
-                    flBannerAds.visibility = View.VISIBLE
+                    flBannerAds.visible()
                     callbackShow?.invoke()
                 } else {
                     if (alwaysShow) {
-                        flBannerAds.visibility = View.VISIBLE
+                        flBannerAds.visible()
                         callbackShow?.invoke()
                     } else {
-                        flBannerAds.visibility = View.GONE
+                        flBannerAds.gone()
                     }
                 }
                 super.onAdLoaded()
@@ -66,9 +80,9 @@ object BannerUtils {
             override fun onAdFailedToLoad(loadAdError: LoadAdError) {
                 super.onAdFailedToLoad(loadAdError)
                 if (alwaysShow) {
-                    flBannerAds.visibility = View.VISIBLE
+                    flBannerAds.visible()
                 } else {
-                    flBannerAds.visibility = View.GONE
+                    flBannerAds.gone()
                 }
             }
         }
