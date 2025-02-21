@@ -43,4 +43,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
 
     implementation(project(":core"))
+
+    // admob
+    implementation(libs.play.services.ads)
 }

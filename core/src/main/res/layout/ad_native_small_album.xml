@@ -4,8 +4,6 @@
     android:id="@+id/ad_view_album"
     android:layout_width="match_parent"
     android:layout_height="92dp"
-    android:layout_marginHorizontal="6dp"
-    android:layout_marginBottom="8dp"
     android:background="@drawable/ads_bg_album">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -32,7 +30,6 @@
             android:textAlignment="viewStart"
             android:textColor="@color/ads_text_color_headline_album"
             android:textSize="@dimen/ads_text_size_headline_album"
-            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/ad_attribution_album"
             app:layout_constraintEnd_toEndOf="@id/ad_call_to_action_album"
             app:layout_constraintStart_toStartOf="@id/ad_call_to_action_album"/>
@@ -68,16 +65,15 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/ad_call_to_action_album"
             android:layout_width="0dp"
-            android:layout_height="32dp"
+            android:layout_height="@dimen/ads_height_call_to_action_album"
             android:layout_gravity="center_vertical"
             android:layout_marginHorizontal="11dp"
             android:layout_marginBottom="9dp"
-            android:background="@drawable/ads_selector_bg_call_action_button_album"
+            android:background="@drawable/ads_bg_call_action_button_album"
             android:ellipsize="end"
             android:gravity="center"
             android:includeFontPadding="false"
             android:maxLines="1"
-            android:textAllCaps="true"
             android:textColor="@color/ads_text_color_call_button_album"
             android:textSize="@dimen/ads_text_size_call_to_action_album"
             app:layout_constraintBottom_toBottomOf="parent"

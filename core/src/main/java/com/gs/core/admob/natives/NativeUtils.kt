@@ -26,7 +26,10 @@ object NativeUtils {
                     adLoader.loadAd(AdRequest.Builder().setHttpTimeoutMillis(5000).build())
                 } catch (e: Exception) {
                     e.printStackTrace()
+                    callback.invoke(null)
                 }
+            } else {
+                callback.invoke(null)
             }
         }
     }
