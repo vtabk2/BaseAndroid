@@ -25,7 +25,13 @@ class NativeAdSmallView(context: Context, attrs: AttributeSet? = null) : BaseNat
         }
     }
 
-    override val subTitleView: AppCompatTextView? = null
+    override val subTitleView: AppCompatTextView? by lazy {
+        when (adsMode) {
+            AdsMode.FONT -> adNativeSmallFontBinding?.adBodyFont
+            AdsMode.TEMPLATE -> adNativeSmallTemplateBinding?.adBodyTemplate
+            else -> null
+        }
+    }
 
     override val starView: RatingBar? by lazy {
         when (adsMode) {

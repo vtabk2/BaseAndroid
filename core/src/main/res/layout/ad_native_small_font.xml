@@ -41,7 +41,7 @@
                 app:layout_constraintEnd_toStartOf="@id/ad_call_to_action_font"
                 app:layout_constraintStart_toEndOf="@id/ad_app_icon_font"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.3"/>
+                app:layout_constraintVertical_bias="0.2"/>
 
             <RatingBar
                 android:id="@+id/ad_stars_font"
@@ -70,6 +70,20 @@
                 android:textSize="@dimen/ads_text_size_attribution_font"
                 app:layout_constraintStart_toStartOf="@id/ad_headline_font"
                 app:layout_constraintTop_toBottomOf="@id/ad_headline_font"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ad_body_font"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:textColor="@color/ads_text_color_body_font"
+                android:textSize="@dimen/ads_text_size_body_font"
+                app:layout_constraintEnd_toEndOf="@id/ad_headline_font"
+                app:layout_constraintStart_toStartOf="@id/ad_headline_font"
+                app:layout_constraintTop_toBottomOf="@+id/ad_attribution_font"/>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/ad_call_to_action_font"

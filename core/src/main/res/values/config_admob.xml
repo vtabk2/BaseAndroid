@@ -138,6 +138,7 @@
 
     // font
     <color name="ads_text_color_headline_font">@android:color/black</color>
+    <color name="ads_text_color_body_font">@android:color/black</color>
     <color name="ads_text_color_attribution_font">@android:color/white</color>
     <color name="ads_text_color_call_button_font">@color/selector_color_white_black</color>
     <color name="ads_call_button_font">#4088F4</color>
@@ -149,6 +150,7 @@
     </drawable>
 
     <dimen name="ads_text_size_headline_font">15sp</dimen>
+    <dimen name="ads_text_size_body_font">12sp</dimen>
     <dimen name="ads_text_size_attribution_font">8sp</dimen>
     <dimen name="ads_text_size_call_to_action_font">14sp</dimen>
     <dimen name="ads_height_call_to_action_font">32dp</dimen>
@@ -161,6 +163,7 @@
 
     // template
     <color name="ads_text_color_headline_template">@android:color/black</color>
+    <color name="ads_text_color_body_template">@android:color/black</color>
     <color name="ads_text_color_attribution_template">@android:color/white</color>
     <color name="ads_text_color_call_button_template">@color/selector_color_white_black</color>
     <color name="ads_call_button_template">#4088F4</color>
@@ -172,6 +175,7 @@
     </drawable>
 
     <dimen name="ads_text_size_headline_template">15sp</dimen>
+    <dimen name="ads_text_size_body_template">12sp</dimen>
     <dimen name="ads_text_size_attribution_template">8sp</dimen>
     <dimen name="ads_text_size_call_to_action_template">14sp</dimen>
     <dimen name="ads_height_call_to_action_template">32dp</dimen>
