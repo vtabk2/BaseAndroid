@@ -111,10 +111,12 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
     fun startShimmer() {
         shimmerView?.visible()
         shimmerView?.startShimmer()
+        adView?.invisible()
     }
 
     fun stopShimmer() {
         shimmerView?.hideShimmer()
         shimmerView?.gone()
+        adView?.visible()
     }
 }

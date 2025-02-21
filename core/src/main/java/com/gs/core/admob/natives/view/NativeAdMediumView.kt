@@ -86,6 +86,7 @@ class NativeAdMediumView(context: Context, attrs: AttributeSet? = null) : BaseNa
     override val shimmerView: ShimmerFrameLayout? by lazy {
         when (adsMode) {
             AdsMode.FRAME -> adNativeMediumFrameBinding?.frameShimmer?.adViewFrameShimmer
+            AdsMode.LANGUAGE -> adNativeMediumLanguageBinding?.languageShimmer?.adViewLanguageShimmer
             else -> null
         }
     }
