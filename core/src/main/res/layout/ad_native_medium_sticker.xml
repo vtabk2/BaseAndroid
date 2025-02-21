@@ -25,8 +25,8 @@
                 android:includeFontPadding="false"
                 android:layoutDirection="ltr"
                 android:text="AD"
-                android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textColor="@color/ads_text_color_attribution_sticker"
+                android:textSize="@dimen/ads_text_size_attribution_sticker"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
@@ -55,8 +55,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:textAlignment="viewStart"
-                android:textColor="@android:color/white"
-                android:textSize="15sp"
+                android:textColor="@color/ads_text_color_headline_sticker"
+                android:textSize="@dimen/ads_text_size_headline_sticker"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/viewBound"
                 app:layout_constraintTop_toTopOf="@id/viewBound"/>
@@ -82,8 +82,8 @@
                 android:ellipsize="end"
                 android:maxLines="2"
                 android:textAlignment="viewStart"
-                android:textColor="@android:color/white"
-                android:textSize="12sp"
+                android:textColor="@color/ads_text_color_body_sticker"
+                android:textSize="@dimen/ads_text_size_body_sticker"
                 app:layout_constraintEnd_toEndOf="@id/ad_headline_sticker"
                 app:layout_constraintStart_toStartOf="@id/viewBound"
                 app:layout_constraintTop_toBottomOf="@id/ad_stars_sticker"/>
@@ -99,7 +99,7 @@
                 android:lineSpacingExtra="5dp"
                 android:minWidth="96dp"
                 android:textColor="@color/ads_text_color_call_button_sticker"
-                android:textSize="13sp"
+                android:textSize="@dimen/ads_text_size_call_to_action_sticker"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>

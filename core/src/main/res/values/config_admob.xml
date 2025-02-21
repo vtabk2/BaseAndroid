@@ -31,10 +31,24 @@
     <dimen name="ads_text_size_call_to_action_language">16sp</dimen>
 
     // share
+    <color name="ads_text_color_headline_share">@android:color/white</color>
+    <color name="ads_text_color_body_share">@android:color/white</color>
+    <color name="ads_text_color_attribution_share">@android:color/white</color>
     <color name="ads_text_color_call_button_share">@color/selector_color_white_black</color>
+    <dimen name="ads_text_size_headline_share">15sp</dimen>
+    <dimen name="ads_text_size_body_share">13sp</dimen>
+    <dimen name="ads_text_size_attribution_share">8sp</dimen>
+    <dimen name="ads_text_size_call_to_action_share">14sp</dimen>
 
     // sticker
+    <color name="ads_text_color_headline_sticker">@android:color/white</color>
+    <color name="ads_text_color_body_sticker">@android:color/white</color>
+    <color name="ads_text_color_attribution_sticker">@android:color/white</color>
     <color name="ads_text_color_call_button_sticker">@color/selector_color_white_black</color>
+    <dimen name="ads_text_size_headline_sticker">15sp</dimen>
+    <dimen name="ads_text_size_body_sticker">12sp</dimen>
+    <dimen name="ads_text_size_attribution_sticker">8sp</dimen>
+    <dimen name="ads_text_size_call_to_action_sticker">13sp</dimen>
 
     // album
     <color name="ads_text_color_call_button_album">@color/selector_color_white_black</color>
