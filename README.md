@@ -47,4 +47,5 @@ launchWhenResumed {
 - NativeUtils
 - RewardedInterstitialUtils
 
-- Thêm Open ads
+- AppOpenAdManager
+- AppResumeAdManager

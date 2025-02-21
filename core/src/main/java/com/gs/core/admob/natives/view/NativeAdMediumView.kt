@@ -87,7 +87,7 @@ class NativeAdMediumView(context: Context, attrs: AttributeSet? = null) : BaseNa
         when (adsMode) {
             AdsMode.FRAME -> adNativeMediumFrameBinding?.frameShimmer?.adViewFrameShimmer
             AdsMode.LANGUAGE -> adNativeMediumLanguageBinding?.languageShimmer?.adViewLanguageShimmer
-            else -> null
+            else -> adNativeMediumShareBinding?.shareShimmer?.adViewShareShimmer
         }
     }
 
