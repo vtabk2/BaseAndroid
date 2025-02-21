@@ -4,11 +4,13 @@
     <string name="banner_id" translatable="false">ca-app-pub-3940256099942544/9214589741</string>
     <string name="banner_id_home" translatable="false">ca-app-pub-3940256099942544/9214589741</string>
     <string name="banner_id_collapsible" translatable="false">ca-app-pub-3940256099942544/2014213617</string>
-    <string name="rewarded_interstitial_id" translatable="false">ca-app-pub-3940256099942544/5354046379</string>
     <string name="full_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="ads_full_without_video" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="full_without_video" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
     <string name="native_id" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
     <string name="native_language" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="rewarded_interstitial_id" translatable="false">ca-app-pub-3940256099942544/5354046379</string>
+    <string name="app_open_id" translatable="false">ca-app-pub-3940256099942544/9257395921</string>
+    <string name="app_open_id_resume" translatable="false">ca-app-pub-3940256099942544/9257395921</string>
 
     // frame
     <color name="ads_text_color_headline_frame">@android:color/white</color>
