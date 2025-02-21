@@ -33,7 +33,7 @@ class NativeAdMediumView(context: Context, attrs: AttributeSet? = null) : BaseNa
             AdsMode.STICKER -> adNativeMediumStickerBinding?.adBodySticker
             AdsMode.FRAME -> adNativeMediumFrameBinding?.adBodyFrame
             AdsMode.LANGUAGE -> adNativeMediumLanguageBinding?.adBodyLanguage
-            else -> null
+            else -> adNativeMediumShareBinding?.adBodyShare
         }
     }
 

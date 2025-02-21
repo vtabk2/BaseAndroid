@@ -45,6 +45,7 @@
     <color name="ads_text_color_call_button_language">@color/selector_color_white_black</color>
     <color name="ads_call_button_language">#14B261</color>
     <color name="ads_call_button_language_pressed">#DFE1E6</color>
+    <color name="ads_bg_color_language">#F2F2F2</color>
 
     <drawable name="ads_bg_call_action_button_language">
         @drawable/ads_selector_bg_call_action_button_language
@@ -60,6 +61,7 @@
     <dimen name="ads_padding_left_call_to_action_language">10dp</dimen>
     <dimen name="ads_padding_right_call_to_action_language">10dp</dimen>
     <dimen name="ads_padding_top_call_to_action_language">6dp</dimen>
+    <dimen name="ads_radius_bg_language">0dp</dimen>
 
     // share
     <color name="ads_text_color_headline_share">@android:color/white</color>
@@ -68,6 +70,7 @@
     <color name="ads_text_color_call_button_share">@color/selector_color_white_black</color>
     <color name="ads_call_button_share">#14B261</color>
     <color name="ads_call_button_share_pressed">#DFE1E6</color>
+    <color name="ads_bg_color_share">#212121</color>
 
     <drawable name="ads_bg_call_action_button_share">
         @drawable/ads_selector_bg_call_action_button_share
@@ -83,6 +86,7 @@
     <dimen name="ads_padding_left_call_to_action_share">10dp</dimen>
     <dimen name="ads_padding_right_call_to_action_share">10dp</dimen>
     <dimen name="ads_padding_top_call_to_action_share">6dp</dimen>
+    <dimen name="ads_radius_bg_share">10dp</dimen>
 
     // sticker
     <color name="ads_text_color_headline_sticker">@android:color/white</color>
