@@ -2,7 +2,6 @@ package com.gs.core.admob.natives.view
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.RatingBar
 import androidx.appcompat.widget.AppCompatTextView
@@ -127,7 +126,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
 
     override val shimmerView: ShimmerFrameLayout? by lazy {
         when (adsMode) {
-            AdsMode.ALBUM -> null
+            AdsMode.ALBUM -> adNativeAlbumBinding?.albumShimmer?.adViewAlbumShimmer
             AdsMode.FONT -> null
             AdsMode.FRAME -> adNativeFrameBinding?.frameShimmer?.adViewFrameShimmer
             AdsMode.LANGUAGE -> adNativeLanguageBinding?.languageShimmer?.adViewLanguageShimmer
@@ -148,7 +147,10 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding = AdNativeShareBinding.inflate(layoutInflater, this, true)
             AdsMode.STICKER -> adNativeStickerBinding = AdNativeStickerBinding.inflate(layoutInflater, this, true)
             AdsMode.TEMPLATE -> adNativeTemplateBinding = AdNativeTemplateBinding.inflate(layoutInflater, this, true)
-            AdsMode.CUSTOM -> customView = LayoutInflater.from(context).inflate(builder.adLayoutId, this, true)
+            AdsMode.CUSTOM -> {
+                customView = layoutInflater.inflate(builder.adLayoutId, null)
+                addView(customView)
+            }
             else -> {
 
             }

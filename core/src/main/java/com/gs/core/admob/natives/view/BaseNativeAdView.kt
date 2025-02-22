@@ -124,15 +124,23 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
         adView?.visible()
     }
 
+    fun applyBuilder(builder: Builder) {
+        this.builder = builder
+
+        removeView(customView)
+        customView = layoutInflater.inflate(builder.adLayoutId, null)
+        addView(customView)
+    }
+
     data class Builder(
-        val adLayoutId: Int = R.layout.ad_native_custom,
-        val adHeadlineId: Int = R.id.ad_headline_custom,
-        val adBodyId: Int = R.id.ad_body_custom,
-        val adStarsId: Int = R.id.ad_stars_custom,
-        val adAppIconId: Int = R.id.ad_app_icon_custom,
-        val adCallToActionId: Int = R.id.ad_call_to_action_custom,
-        val adViewId: Int = R.id.ad_view_custom,
-        val adMediaViewId: Int = R.id.ad_media_custom,
-        val adShimmerId: Int = R.id.ad_shimmer_custom
+        var adLayoutId: Int = R.layout.ad_native_custom,
+        var adHeadlineId: Int = R.id.ad_headline_custom,
+        var adBodyId: Int = R.id.ad_body_custom,
+        var adStarsId: Int = R.id.ad_stars_custom,
+        var adAppIconId: Int = R.id.ad_app_icon_custom,
+        var adCallToActionId: Int = R.id.ad_call_to_action_custom,
+        var adViewId: Int = R.id.ad_view_custom,
+        var adMediaViewId: Int = R.id.ad_media_custom,
+        var adShimmerId: Int = R.id.ad_shimmer_custom
     )
 }

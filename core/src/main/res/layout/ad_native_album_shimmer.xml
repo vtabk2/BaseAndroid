@@ -5,11 +5,10 @@
     android:layout_height="wrap_content"
     app:heightToWidth="0.25">
 
-    <com.google.android.gms.ads.nativead.NativeAdView
-        android:id="@+id/ad_view_album"
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/ad_view_album_shimmer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/ads_bg_album">
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -21,6 +20,7 @@
                 android:layout_height="0dp"
                 android:layout_marginStart="11dp"
                 android:adjustViewBounds="true"
+                android:background="@drawable/ads_bg_shimmer"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintHeight_percent="0.6"
@@ -32,6 +32,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
+                android:background="@drawable/ads_bg_shimmer"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:textAlignment="viewStart"
@@ -48,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="2dp"
+                android:background="@drawable/ads_bg_shimmer"
                 android:isIndicator="true"
                 android:numStars="5"
                 android:stepSize="0.5"
@@ -76,7 +78,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginHorizontal="11dp"
                 android:layout_marginBottom="7dp"
-                android:background="@drawable/ads_bg_call_action_button_album"
+                android:background="@drawable/ads_bg_shimmer"
                 android:ellipsize="end"
                 android:gravity="center"
                 android:includeFontPadding="false"
@@ -87,9 +89,5 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/ad_app_icon_album"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.gms.ads.nativead.NativeAdView>
-
-    <include
-        android:id="@+id/albumShimmer"
-        layout="@layout/ad_native_album_shimmer"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
 </com.gs.core.ui.view.AspectRatioLayout>
