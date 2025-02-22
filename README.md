@@ -49,3 +49,49 @@ launchWhenResumed {
 
 - AppOpenAdManager
 - AppResumeAdManager
+
+- Tùy biến NativeAdView thì chọn ads_mode = custom
+
+```css
+        <com.gs.core.admob.natives.view.NativeGsAdView
+            android:id="@+id/nativeCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:ads_mode="custom"/>
+```
+
+- Cách 1: Giữ id gốc chỉ đổi id layout
+```css
+        val builder = BaseNativeAdView.Builder().apply {
+            adLayoutId = R.layout.ad_native_test
+        }
+        bindingView.nativeCustom.applyBuilder(builder)
+```
+
+- Cách 2: Đổi tất cả id thì cấu hình lại trong builder: id = 0 khi không có trong layout
+
+```css
+        val builder = BaseNativeAdView.Builder().apply {
+            adLayoutId = R.layout.ad_native_test
+            adHeadlineId = R.id.ad_headline_test
+            adBodyId = 0
+            adStarsId = R.id.ad_stars_test
+            adAppIconId = R.id.ad_app_icon_test
+            adCallToActionId = R.id.ad_call_to_action_test
+            adViewId = R.id.ad_view_test
+            adMediaViewId = 0
+            adShimmerId = R.id.ad_view_test_shimmer
+        }
+        bindingView.nativeCustom.applyBuilder(builder)
+```
+
+- Cách load native
+
+```css
+        NativeUtils.loadNativeAds(this, this, isVip = false, callbackStart = {
+            bindingView.nativeCustom.startShimmer()
+        }, callback = { nativeAd ->
+            bindingView.nativeCustom.setNativeAd(nativeAd)
+        })
+```
