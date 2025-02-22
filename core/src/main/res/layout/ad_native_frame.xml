@@ -116,5 +116,5 @@
 
     <include
         android:id="@+id/frame_shimmer"
-        layout="@layout/ad_native_medium_frame_shimmer"/>
+        layout="@layout/ad_native_frame_shimmer"/>
 </com.gs.core.ui.view.AspectRatioLayout>

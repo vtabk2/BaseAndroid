@@ -3,6 +3,7 @@ package com.gs.core.admob.natives.view
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.RatingBar
@@ -29,6 +30,8 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
     abstract val adView: NativeAdView?
     abstract val mediaView: MediaView?
     abstract val shimmerView: ShimmerFrameLayout?
+
+    var customView: View? = null
 
     private var nativeAd: NativeAd? = null
     var adsMode = AdsMode.ALBUM

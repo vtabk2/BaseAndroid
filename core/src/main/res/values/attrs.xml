@@ -94,10 +94,12 @@
         <attr name="ads_mode" format="enum">
             <enum name="album" value="0"/>
             <enum name="font" value="1"/>
-            <enum name="template" value="2"/>
-            <enum name="sticker" value="3"/>
-            <enum name="frame" value="4"/>
-            <enum name="language" value="5"/>
+            <enum name="frame" value="2"/>
+            <enum name="language" value="3"/>
+            <enum name="share" value="4"/>
+            <enum name="sticker" value="5"/>
+            <enum name="template" value="6"/>
+            <enum name="custom" value="7"/>
         </attr>
     </declare-styleable>
 
