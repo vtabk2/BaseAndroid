@@ -188,6 +188,10 @@
     <dimen name="ads_padding_top_call_to_action_template">6dp</dimen>
     <dimen name="ads_radius_bg_template">0dp</dimen>
 
+    // shimmer
+    <color name="ads_bg_shimmer_color">#80000000</color>
+    <dimen name="ads_bg_shimmer_radius">14dp</dimen>
+
     <style name="adsRatingBar" parent="Theme.AppCompat">
         <item name="colorControlNormal">#FFBF1C</item>
         <item name="colorControlActivated">#FFBF1C</item>

@@ -127,7 +127,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
     override val shimmerView: ShimmerFrameLayout? by lazy {
         when (adsMode) {
             AdsMode.ALBUM -> adNativeAlbumBinding?.albumShimmer?.adViewAlbumShimmer
-            AdsMode.FONT -> null
+            AdsMode.FONT -> adNativeFontBinding?.fontShimmer?.adViewFontShimmer
             AdsMode.FRAME -> adNativeFrameBinding?.frameShimmer?.adViewFrameShimmer
             AdsMode.LANGUAGE -> adNativeLanguageBinding?.languageShimmer?.adViewLanguageShimmer
             AdsMode.SHARE -> adNativeShareBinding?.shareShimmer?.adViewShareShimmer
