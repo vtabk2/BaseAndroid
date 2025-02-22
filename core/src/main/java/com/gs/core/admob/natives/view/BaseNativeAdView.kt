@@ -32,6 +32,7 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
     abstract val shimmerView: ShimmerFrameLayout?
 
     var customView: View? = null
+    var builder = Builder()
 
     private var nativeAd: NativeAd? = null
     var adsMode = AdsMode.ALBUM
@@ -122,4 +123,16 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
         shimmerView?.gone()
         adView?.visible()
     }
+
+    data class Builder(
+        val adLayoutId: Int = R.layout.ad_native_custom,
+        val adHeadlineId: Int = R.id.ad_headline_custom,
+        val adBodyId: Int = R.id.ad_body_custom,
+        val adStarsId: Int = R.id.ad_stars_custom,
+        val adAppIconId: Int = R.id.ad_app_icon_custom,
+        val adCallToActionId: Int = R.id.ad_call_to_action_custom,
+        val adViewId: Int = R.id.ad_view_custom,
+        val adMediaViewId: Int = R.id.ad_media_custom,
+        val adShimmerId: Int = R.id.ad_shimmer_custom
+    )
 }

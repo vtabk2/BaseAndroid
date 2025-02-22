@@ -2,6 +2,7 @@ package com.gs.core.admob.natives.view
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.RatingBar
 import androidx.appcompat.widget.AppCompatTextView
@@ -35,7 +36,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.adHeadlineShare
             AdsMode.STICKER -> adNativeStickerBinding?.adHeadlineSticker
             AdsMode.TEMPLATE -> adNativeTemplateBinding?.adHeadlineTemplate
-            AdsMode.CUSTOM -> null
+            AdsMode.CUSTOM -> customView?.findViewById(builder.adHeadlineId)
             else -> null
         }
     }
@@ -49,7 +50,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.adBodyShare
             AdsMode.STICKER -> adNativeStickerBinding?.adBodySticker
             AdsMode.TEMPLATE -> adNativeTemplateBinding?.adBodyTemplate
-            AdsMode.CUSTOM -> null
+            AdsMode.CUSTOM -> customView?.findViewById(builder.adBodyId)
             else -> null
         }
     }
@@ -63,7 +64,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.adStarsShare
             AdsMode.STICKER -> adNativeStickerBinding?.adStarsSticker
             AdsMode.TEMPLATE -> adNativeTemplateBinding?.adStarsTemplate
-            AdsMode.CUSTOM -> null
+            AdsMode.CUSTOM -> customView?.findViewById(builder.adStarsId)
             else -> null
         }
     }
@@ -77,7 +78,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.adAppIconShare
             AdsMode.STICKER -> adNativeStickerBinding?.adAppIconSticker
             AdsMode.TEMPLATE -> adNativeTemplateBinding?.adAppIconTemplate
-            AdsMode.CUSTOM -> null
+            AdsMode.CUSTOM -> customView?.findViewById(builder.adAppIconId)
             else -> null
         }
     }
@@ -91,7 +92,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.adCallToActionShare
             AdsMode.STICKER -> adNativeStickerBinding?.adCallToActionSticker
             AdsMode.TEMPLATE -> adNativeTemplateBinding?.adCallToActionTemplate
-            AdsMode.CUSTOM -> null
+            AdsMode.CUSTOM -> customView?.findViewById(builder.adCallToActionId)
             else -> null
         }
     }
@@ -105,7 +106,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.adViewShare
             AdsMode.STICKER -> adNativeStickerBinding?.adViewSticker
             AdsMode.TEMPLATE -> adNativeTemplateBinding?.adViewTemplate
-            AdsMode.CUSTOM -> null
+            AdsMode.CUSTOM -> customView?.findViewById(builder.adViewId)
             else -> null
         }
     }
@@ -119,7 +120,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.adMediaShare
             AdsMode.STICKER -> null
             AdsMode.TEMPLATE -> null
-            AdsMode.CUSTOM -> null
+            AdsMode.CUSTOM -> customView?.findViewById(builder.adMediaViewId)
             else -> null
         }
     }
@@ -133,7 +134,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.shareShimmer?.adViewShareShimmer
             AdsMode.STICKER -> null
             AdsMode.TEMPLATE -> null
-            AdsMode.CUSTOM -> null
+            AdsMode.CUSTOM -> customView?.findViewById(builder.adShimmerId)
             else -> null
         }
     }
@@ -147,10 +148,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding = AdNativeShareBinding.inflate(layoutInflater, this, true)
             AdsMode.STICKER -> adNativeStickerBinding = AdNativeStickerBinding.inflate(layoutInflater, this, true)
             AdsMode.TEMPLATE -> adNativeTemplateBinding = AdNativeTemplateBinding.inflate(layoutInflater, this, true)
-            AdsMode.CUSTOM -> {
-
-            }
-
+            AdsMode.CUSTOM -> customView = LayoutInflater.from(context).inflate(builder.adLayoutId, this, true)
             else -> {
 
             }

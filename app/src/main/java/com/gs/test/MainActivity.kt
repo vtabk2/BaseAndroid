@@ -27,6 +27,7 @@ class MainActivity : BaseVMActivity<ActivityMainBinding>() {
             bindingView.nativeAlbum.startShimmer()
             bindingView.nativeFont.startShimmer()
             bindingView.nativeTemplate.startShimmer()
+            bindingView.nativeCustom.startShimmer()
         }, callback = { nativeAd ->
             bindingView.nativeFrame1.setNativeAd(nativeAd)
             bindingView.nativeFrame2.setNativeAd(nativeAd)
@@ -36,6 +37,7 @@ class MainActivity : BaseVMActivity<ActivityMainBinding>() {
             bindingView.nativeAlbum.setNativeAd(nativeAd)
             bindingView.nativeFont.setNativeAd(nativeAd)
             bindingView.nativeTemplate.setNativeAd(nativeAd)
+            bindingView.nativeCustom.setNativeAd(nativeAd)
         })
     }
 }
