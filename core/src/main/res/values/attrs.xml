@@ -101,6 +101,15 @@
             <enum name="template" value="6"/>
             <enum name="custom" value="7"/>
         </attr>
+        <attr name="adLayoutId" format="integer"/>
+        <attr name="adHeadlineId" format="integer"/>
+        <attr name="adBodyId" format="integer"/>
+        <attr name="adStarsId" format="integer"/>
+        <attr name="adAppIconId" format="integer"/>
+        <attr name="adCallToActionId" format="integer"/>
+        <attr name="adViewId" format="integer"/>
+        <attr name="adMediaViewId" format="integer"/>
+        <attr name="adShimmerId" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="AspectRatioLayout">
