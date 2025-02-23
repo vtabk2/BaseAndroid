@@ -163,8 +163,8 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
     }
 
     fun applyBuilder(builder: Builder) {
-        if (adsMode != AdsMode.CUSTOM) return
         this.builder = builder
+        if (adsMode != AdsMode.CUSTOM) return
         removeView(customView)
         initViewWithMode()
     }

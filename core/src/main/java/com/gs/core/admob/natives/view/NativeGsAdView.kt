@@ -138,7 +138,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
         }
     }
 
-    init {
+    override fun initViewWithMode() {
         when (adsMode) {
             AdsMode.ALBUM -> adNativeAlbumBinding = AdNativeAlbumBinding.inflate(layoutInflater, this, true)
             AdsMode.FONT -> adNativeFontBinding = AdNativeFontBinding.inflate(layoutInflater, this, true)
@@ -151,6 +151,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
                 customView = layoutInflater.inflate(builder.adLayoutId, null)
                 addView(customView)
             }
+
             else -> {
 
             }

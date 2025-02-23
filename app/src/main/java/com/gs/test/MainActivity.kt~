@@ -1,6 +1,7 @@
 package com.gs.test
 
 import android.os.Bundle
+import com.gs.core.admob.natives.AdsMode
 import com.gs.core.admob.natives.NativeUtils
 import com.gs.core.admob.natives.view.BaseNativeAdView
 import com.gs.core.ui.activity.BaseVMActivity
@@ -31,6 +32,7 @@ class MainActivity : BaseVMActivity<ActivityMainBinding>() {
             adMediaViewId = 0
             adShimmerId = R.id.ad_view_test_shimmer
         }
+        bindingView.nativeCustom.adsMode = AdsMode.CUSTOM
         bindingView.nativeCustom.applyBuilder(builder)
 //
 //        bindingView.nativeTest1.adsMode = AdsMode.SHARE

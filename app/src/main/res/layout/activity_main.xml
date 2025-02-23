@@ -11,6 +11,11 @@
         android:orientation="vertical">
 
         <com.gs.core.admob.natives.view.NativeGsAdView
+            android:id="@+id/nativeTest1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.gs.core.admob.natives.view.NativeGsAdView
             android:id="@+id/nativeAlbum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

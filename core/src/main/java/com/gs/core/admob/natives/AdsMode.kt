@@ -1,6 +1,7 @@
 package com.gs.core.admob.natives
 
 enum class AdsMode {
+    NONE,
     ALBUM,
     FONT,
     FRAME,
