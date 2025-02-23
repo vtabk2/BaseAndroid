@@ -192,7 +192,10 @@
     <color name="ads_bg_shimmer_color">#80000000</color>
     <dimen name="ads_bg_shimmer_radius">14dp</dimen>
 
-    //
+    // mẫu khởi tạo sẽ có parent là BaseNativeCustom
+    <style name="NativeCustom" parent="BaseNativeCustom">
+
+    </style>
 
     <style name="BaseNativeCustom">
         <item name="adLayoutId">@layout/ad_native_custom</item>
