@@ -192,6 +192,20 @@
     <color name="ads_bg_shimmer_color">#80000000</color>
     <dimen name="ads_bg_shimmer_radius">14dp</dimen>
 
+    //
+
+    <style name="BaseNativeCustom">
+        <item name="adLayoutId">@layout/ad_native_custom</item>
+        <item name="adHeadlineId">@id/ad_headline_custom</item>
+        <item name="adBodyId">@id/ad_body_custom</item>
+        <item name="adStarsId">@id/ad_stars_custom</item>
+        <item name="adAppIconId">@id/ad_app_icon_custom</item>
+        <item name="adCallToActionId">@id/ad_call_to_action_custom</item>
+        <item name="adViewId">@id/ad_view_custom</item>
+        <item name="adMediaViewId">@id/ad_media_custom</item>
+        <item name="adShimmerId">@id/ad_shimmer_custom</item>
+    </style>
+
     <style name="adsRatingBar" parent="Theme.AppCompat">
         <item name="colorControlNormal">#FFBF1C</item>
         <item name="colorControlActivated">#FFBF1C</item>
