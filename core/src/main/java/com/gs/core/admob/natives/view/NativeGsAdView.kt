@@ -27,7 +27,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
     private var adNativeTemplateBinding: AdNativeTemplateBinding? = null
 
     override val titleView: AppCompatTextView? by lazy {
-        when (adsMode) {
+        when (builder.adsMode) {
             AdsMode.ALBUM -> adNativeAlbumBinding?.adHeadlineAlbum
             AdsMode.FONT -> adNativeFontBinding?.adHeadlineFont
             AdsMode.FRAME -> adNativeFrameBinding?.adHeadlineFrame
@@ -41,7 +41,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
     }
 
     override val subTitleView: AppCompatTextView? by lazy {
-        when (adsMode) {
+        when (builder.adsMode) {
             AdsMode.ALBUM -> null
             AdsMode.FONT -> adNativeFontBinding?.adBodyFont
             AdsMode.FRAME -> adNativeFrameBinding?.adBodyFrame
@@ -55,7 +55,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
     }
 
     override val starView: RatingBar? by lazy {
-        when (adsMode) {
+        when (builder.adsMode) {
             AdsMode.ALBUM -> adNativeAlbumBinding?.adStarsAlbum
             AdsMode.FONT -> adNativeFontBinding?.adStarsFont
             AdsMode.FRAME -> adNativeFrameBinding?.adStarsFrame
@@ -69,7 +69,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
     }
 
     override val iconView: ImageView? by lazy {
-        when (adsMode) {
+        when (builder.adsMode) {
             AdsMode.ALBUM -> adNativeAlbumBinding?.adAppIconAlbum
             AdsMode.FONT -> adNativeFontBinding?.adAppIconFont
             AdsMode.FRAME -> adNativeFrameBinding?.adAppIconFrame
@@ -83,7 +83,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
     }
 
     override val callActionButtonView: AppCompatTextView? by lazy {
-        when (adsMode) {
+        when (builder.adsMode) {
             AdsMode.ALBUM -> adNativeAlbumBinding?.adCallToActionAlbum
             AdsMode.FONT -> adNativeFontBinding?.adCallToActionFont
             AdsMode.FRAME -> adNativeFrameBinding?.adCallToActionFrame
@@ -97,7 +97,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
     }
 
     override val adView: NativeAdView? by lazy {
-        when (adsMode) {
+        when (builder.adsMode) {
             AdsMode.ALBUM -> adNativeAlbumBinding?.adViewAlbum
             AdsMode.FONT -> adNativeFontBinding?.adViewFont
             AdsMode.FRAME -> adNativeFrameBinding?.adViewFrame
@@ -111,7 +111,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
     }
 
     override val mediaView: MediaView? by lazy {
-        when (adsMode) {
+        when (builder.adsMode) {
             AdsMode.ALBUM -> null
             AdsMode.FONT -> null
             AdsMode.FRAME -> adNativeFrameBinding?.adMediaFrame
@@ -125,7 +125,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
     }
 
     override val shimmerView: ShimmerFrameLayout? by lazy {
-        when (adsMode) {
+        when (builder.adsMode) {
             AdsMode.ALBUM -> adNativeAlbumBinding?.albumShimmer?.adViewAlbumShimmer
             AdsMode.FONT -> adNativeFontBinding?.fontShimmer?.adViewFontShimmer
             AdsMode.FRAME -> adNativeFrameBinding?.frameShimmer?.adViewFrameShimmer
@@ -139,7 +139,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
     }
 
     override fun initViewWithMode() {
-        when (adsMode) {
+        when (builder.adsMode) {
             AdsMode.ALBUM -> adNativeAlbumBinding = AdNativeAlbumBinding.inflate(layoutInflater, this, true)
             AdsMode.FONT -> adNativeFontBinding = AdNativeFontBinding.inflate(layoutInflater, this, true)
             AdsMode.FRAME -> adNativeFrameBinding = AdNativeFrameBinding.inflate(layoutInflater, this, true)
@@ -148,6 +148,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.STICKER -> adNativeStickerBinding = AdNativeStickerBinding.inflate(layoutInflater, this, true)
             AdsMode.TEMPLATE -> adNativeTemplateBinding = AdNativeTemplateBinding.inflate(layoutInflater, this, true)
             AdsMode.CUSTOM -> {
+                removeView(customView)
                 customView = layoutInflater.inflate(builder.adLayoutId, null)
                 addView(customView)
             }

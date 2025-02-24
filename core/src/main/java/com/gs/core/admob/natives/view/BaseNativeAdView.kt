@@ -35,20 +35,13 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
     var builder = Builder()
 
     private var nativeAd: NativeAd? = null
-    var adsMode = AdsMode.NONE
-        set(value) {
-            if (field == value) return
-            field = value
-            initViewWithMode()
-            invalidate()
-        }
 
     init {
         attrs?.let {
             val typedArray = context.obtainStyledAttributes(it, R.styleable.BaseNativeAdView)
 
             if (typedArray.hasValue(R.styleable.BaseNativeAdView_ads_mode)) {
-                adsMode = AdsMode.entries.toTypedArray()[typedArray.getInt(R.styleable.BaseNativeAdView_ads_mode, 0)]
+                builder.adsMode = AdsMode.entries.toTypedArray()[typedArray.getInt(R.styleable.BaseNativeAdView_ads_mode, 0)]
             }
             if (typedArray.hasValue(R.styleable.BaseNativeAdView_adLayoutId)) {
                 builder.adLayoutId = typedArray.getResourceId(R.styleable.BaseNativeAdView_adLayoutId, builder.adLayoutId)
@@ -79,6 +72,8 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
             }
             typedArray.recycle()
         }
+
+        applyBuilder(builder)
     }
 
     open fun initViewWithMode() {}
@@ -117,7 +112,7 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
             starView?.rating = starRating.toFloat()
             starView?.visible()
         } ?: run {
-            if (adsMode == AdsMode.STICKER) {
+            if (builder.adsMode == AdsMode.STICKER) {
                 if (icon != null) {
                     starView?.invisible()
                 } else {
@@ -163,9 +158,7 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
     }
 
     fun applyBuilder(builder: Builder) {
-        if (adsMode != AdsMode.CUSTOM) return
         this.builder = builder
-        removeView(customView)
         initViewWithMode()
     }
 
@@ -178,6 +171,7 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
         var adCallToActionId: Int = R.id.ad_call_to_action_custom,
         var adViewId: Int = R.id.ad_view_custom,
         var adMediaViewId: Int = R.id.ad_media_custom,
-        var adShimmerId: Int = R.id.ad_shimmer_custom
+        var adShimmerId: Int = R.id.ad_shimmer_custom,
+        var adsMode: AdsMode = AdsMode.CUSTOM
     )
 }
