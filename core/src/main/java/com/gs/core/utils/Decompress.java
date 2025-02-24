@@ -1,4 +1,4 @@
-package com.gs.core.ui.view.decompress;
+package com.gs.core.utils;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
