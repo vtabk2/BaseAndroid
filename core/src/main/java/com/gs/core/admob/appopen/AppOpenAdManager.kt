@@ -82,7 +82,7 @@ class AppOpenAdManager {
         return appOpenAd != null
     }
 
-    fun showAdIfAvailable(activity: Activity, isVip: Boolean, callbackFailed: (() -> Unit)? = null) {
+    fun showAdIfAvailable(activity: Activity, isVip: Boolean, callbackSuccess: () -> Unit, callbackFailed: (() -> Unit)? = null) {
         if (activity is AdActivity || isVip) return
         // If the app open ad is already showing, do not show the ad again.
         if (isShowingAd) {
@@ -111,6 +111,7 @@ class AppOpenAdManager {
 
             /** Called when fullscreen content is shown. */
             override fun onAdShowedFullScreenContent() {
+                callbackSuccess.invoke()
             }
         }
         isShowingAd = true
