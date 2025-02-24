@@ -220,6 +220,16 @@
     <color name="ads_bg_shimmer_color">#80000000</color>
     <dimen name="ads_bg_shimmer_radius">14dp</dimen>
 
+    // downloaded
+    <color name="ads_bg_color_downloaded">#000000</color>
+    <color name="ads_bg_color_downloaded_pressed">#CCCACACA</color>
+
+    <dimen name="ads_radius_downloaded">4dp</dimen>
+    <dimen name="ads_padding_bottom_downloaded">6dp</dimen>
+    <dimen name="ads_padding_left_downloaded">10dp</dimen>
+    <dimen name="ads_padding_right_downloaded">10dp</dimen>
+    <dimen name="ads_padding_top_downloaded">6dp</dimen>
+
     // mẫu khởi tạo sẽ có parent là BaseNativeCustom
     <style name="NativeCustom" parent="BaseNativeCustom">
 
