@@ -16,6 +16,7 @@ import com.gs.core.databinding.AdNativeLanguageBinding
 import com.gs.core.databinding.AdNativeShareBinding
 import com.gs.core.databinding.AdNativeStickerBinding
 import com.gs.core.databinding.AdNativeTemplateBinding
+import com.gs.core.databinding.AdNativeVipBinding
 
 class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNativeAdView(context, attrs) {
     private var adNativeAlbumBinding: AdNativeAlbumBinding? = null
@@ -25,6 +26,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
     private var adNativeShareBinding: AdNativeShareBinding? = null
     private var adNativeStickerBinding: AdNativeStickerBinding? = null
     private var adNativeTemplateBinding: AdNativeTemplateBinding? = null
+    private var adNativeVipBinding: AdNativeVipBinding? = null
 
     override val titleView: AppCompatTextView? by lazy {
         when (builder.adsMode) {
@@ -35,6 +37,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.adHeadlineShare
             AdsMode.STICKER -> adNativeStickerBinding?.adHeadlineSticker
             AdsMode.TEMPLATE -> adNativeTemplateBinding?.adHeadlineTemplate
+            AdsMode.VIP -> adNativeVipBinding?.adHeadlineVip
             AdsMode.CUSTOM -> customView?.findViewById(builder.adHeadlineId)
             else -> null
         }
@@ -49,6 +52,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.adBodyShare
             AdsMode.STICKER -> adNativeStickerBinding?.adBodySticker
             AdsMode.TEMPLATE -> adNativeTemplateBinding?.adBodyTemplate
+            AdsMode.VIP -> adNativeVipBinding?.adBodyVip
             AdsMode.CUSTOM -> customView?.findViewById(builder.adBodyId)
             else -> null
         }
@@ -63,6 +67,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.adStarsShare
             AdsMode.STICKER -> adNativeStickerBinding?.adStarsSticker
             AdsMode.TEMPLATE -> adNativeTemplateBinding?.adStarsTemplate
+            AdsMode.VIP -> adNativeVipBinding?.adStarsVip
             AdsMode.CUSTOM -> customView?.findViewById(builder.adStarsId)
             else -> null
         }
@@ -77,6 +82,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.adAppIconShare
             AdsMode.STICKER -> adNativeStickerBinding?.adAppIconSticker
             AdsMode.TEMPLATE -> adNativeTemplateBinding?.adAppIconTemplate
+            AdsMode.VIP -> null
             AdsMode.CUSTOM -> customView?.findViewById(builder.adAppIconId)
             else -> null
         }
@@ -91,6 +97,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.adCallToActionShare
             AdsMode.STICKER -> adNativeStickerBinding?.adCallToActionSticker
             AdsMode.TEMPLATE -> adNativeTemplateBinding?.adCallToActionTemplate
+            AdsMode.VIP -> adNativeVipBinding?.adCallToActionVip
             AdsMode.CUSTOM -> customView?.findViewById(builder.adCallToActionId)
             else -> null
         }
@@ -105,6 +112,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.adViewShare
             AdsMode.STICKER -> adNativeStickerBinding?.adViewSticker
             AdsMode.TEMPLATE -> adNativeTemplateBinding?.adViewTemplate
+            AdsMode.VIP -> adNativeVipBinding?.adViewVip
             AdsMode.CUSTOM -> customView?.findViewById(builder.adViewId)
             else -> null
         }
@@ -119,6 +127,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding?.adMediaShare
             AdsMode.STICKER -> null
             AdsMode.TEMPLATE -> null
+            AdsMode.VIP -> adNativeVipBinding?.adMediaVip
             AdsMode.CUSTOM -> customView?.findViewById(builder.adMediaViewId)
             else -> null
         }
@@ -131,8 +140,9 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.FRAME -> adNativeFrameBinding?.frameShimmer?.adViewFrameShimmer
             AdsMode.LANGUAGE -> adNativeLanguageBinding?.languageShimmer?.adViewLanguageShimmer
             AdsMode.SHARE -> adNativeShareBinding?.shareShimmer?.adViewShareShimmer
-            AdsMode.STICKER -> null
-            AdsMode.TEMPLATE -> null
+            AdsMode.STICKER -> adNativeStickerBinding?.stickerShimmer?.adViewStickerShimmer
+            AdsMode.TEMPLATE -> adNativeTemplateBinding?.templateShimmer?.adViewTemplateShimmer
+            AdsMode.VIP -> adNativeVipBinding?.vipShimmer?.adViewVipShimmer
             AdsMode.CUSTOM -> customView?.findViewById(builder.adShimmerId)
             else -> null
         }
@@ -147,6 +157,7 @@ class NativeGsAdView(context: Context, attrs: AttributeSet? = null) : BaseNative
             AdsMode.SHARE -> adNativeShareBinding = AdNativeShareBinding.inflate(layoutInflater, this, true)
             AdsMode.STICKER -> adNativeStickerBinding = AdNativeStickerBinding.inflate(layoutInflater, this, true)
             AdsMode.TEMPLATE -> adNativeTemplateBinding = AdNativeTemplateBinding.inflate(layoutInflater, this, true)
+            AdsMode.VIP -> adNativeVipBinding = AdNativeVipBinding.inflate(layoutInflater, this, true)
             AdsMode.CUSTOM -> {
                 removeView(customView)
                 customView = layoutInflater.inflate(builder.adLayoutId, null)

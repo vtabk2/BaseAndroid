@@ -92,14 +92,16 @@
 
     <declare-styleable name="BaseNativeAdView">
         <attr name="ads_mode" format="enum">
-            <enum name="album" value="0"/>
-            <enum name="font" value="1"/>
-            <enum name="frame" value="2"/>
-            <enum name="language" value="3"/>
-            <enum name="share" value="4"/>
-            <enum name="sticker" value="5"/>
-            <enum name="template" value="6"/>
-            <enum name="custom" value="7"/>
+            <enum name="none" value="0"/>
+            <enum name="album" value="1"/>
+            <enum name="font" value="2"/>
+            <enum name="frame" value="3"/>
+            <enum name="language" value="4"/>
+            <enum name="share" value="5"/>
+            <enum name="sticker" value="6"/>
+            <enum name="template" value="7"/>
+            <enum name="vip" value="8"/>
+            <enum name="custom" value="9"/>
         </attr>
         <attr name="adLayoutId" format="reference"/>
         <attr name="adHeadlineId" format="reference"/>

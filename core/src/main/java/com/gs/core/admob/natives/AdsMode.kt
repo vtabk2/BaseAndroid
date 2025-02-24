@@ -9,5 +9,6 @@ enum class AdsMode {
     SHARE,
     STICKER,
     TEMPLATE,
+    VIP,
     CUSTOM
 }

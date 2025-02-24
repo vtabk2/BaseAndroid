@@ -72,7 +72,6 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
             }
             typedArray.recycle()
         }
-
         applyBuilder(builder)
     }
 
@@ -158,6 +157,7 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
     }
 
     fun applyBuilder(builder: Builder) {
+        if (builder.adsMode == AdsMode.NONE) return
         this.builder = builder
         initViewWithMode()
     }
@@ -172,6 +172,6 @@ abstract class BaseNativeAdView(context: Context, attrs: AttributeSet?) : FrameL
         var adViewId: Int = R.id.ad_view_custom,
         var adMediaViewId: Int = R.id.ad_media_custom,
         var adShimmerId: Int = R.id.ad_shimmer_custom,
-        var adsMode: AdsMode = AdsMode.CUSTOM
+        var adsMode: AdsMode = AdsMode.NONE
     )
 }

@@ -188,6 +188,32 @@
     <dimen name="ads_padding_top_call_to_action_template">6dp</dimen>
     <dimen name="ads_radius_bg_template">0dp</dimen>
 
+    // vip
+    <color name="ads_text_color_headline_vip">@android:color/black</color>
+    <color name="ads_text_color_body_vip">@android:color/black</color>
+    <color name="ads_text_color_attribution_vip">@android:color/white</color>
+    <color name="ads_text_color_call_button_vip">@color/selector_color_white_black</color>
+    <color name="ads_call_button_vip_start">#7152db</color>
+    <color name="ads_call_button_vip_end">#cf23c7</color>
+    <color name="ads_call_button_vip_pressed">#DFE1E6</color>
+    <color name="ads_bg_color_vip">#F2F2F2</color>
+
+    <drawable name="ads_bg_call_action_button_vip">
+        @drawable/ads_selector_bg_call_action_button_vip
+    </drawable>
+
+    <dimen name="ads_text_size_headline_vip">15sp</dimen>
+    <dimen name="ads_text_size_body_vip">12sp</dimen>
+    <dimen name="ads_text_size_attribution_vip">8sp</dimen>
+    <dimen name="ads_text_size_call_to_action_vip">14sp</dimen>
+    <dimen name="ads_height_call_to_action_vip">36dp</dimen>
+    <dimen name="ads_radius_call_to_action_vip">4dp</dimen>
+    <dimen name="ads_padding_bottom_call_to_action_vip">6dp</dimen>
+    <dimen name="ads_padding_left_bottom_call_to_action_vip">10dp</dimen>
+    <dimen name="ads_padding_right_bottom_call_to_action_vip">10dp</dimen>
+    <dimen name="ads_padding_top_bottom_call_to_action_vip">6dp</dimen>
+    <dimen name="ads_radius_bg_vip">10dp</dimen>
+
     // shimmer
     <color name="ads_bg_shimmer_color">#80000000</color>
     <dimen name="ads_bg_shimmer_radius">14dp</dimen>
