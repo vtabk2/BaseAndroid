@@ -1,9 +1,5 @@
 package com.gs.core.ui.view.hourglass;
 
-/**
- * Created by Ankush Grover(ankush.dev2@gmail.com) on 28/12/17.
- */
-
 public interface HourglassListener {
 
 

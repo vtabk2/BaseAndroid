@@ -4,12 +4,6 @@ import android.annotation.SuppressLint;
 import android.os.Handler;
 import android.os.Message;
 
-
-/**
- * Created by Ankush Grover(ankush.dev2@gmail.com) on 21/12/17.
- */
-
-
 public abstract class Hourglass implements HourglassListener {
 
     private static final int INTERVAL = 1000;

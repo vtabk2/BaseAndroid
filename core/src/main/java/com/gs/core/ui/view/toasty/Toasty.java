@@ -20,23 +20,6 @@ import androidx.annotation.StringRes;
 
 import com.gs.core.R;
 
-/**
- * This file is part of Toasty.
- * <p>
- * Toasty is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * <p>
- * Toasty is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * <p>
- * You should have received a copy of the GNU General Public License
- * along with Toasty.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 @SuppressLint("InflateParams")
 public class Toasty {
     private static final Typeface LOADED_TOAST_TYPEFACE = Typeface.create("sans-serif-condensed", Typeface.NORMAL);
@@ -187,10 +170,6 @@ public class Toasty {
         return warning(context, context.getString(message), LENGTH_SHORT, true);
     }
 
-//    public static void warning(@NonNull Context context, @StringRes int message) {
-//        warning(context, context.getString(message), LENGTH_SHORT, true).show();
-//    }
-
     @CheckResult
     public static Toast warning(@NonNull Context context, @NonNull CharSequence message) {
         return warning(context, message, LENGTH_SHORT, true);
@@ -259,10 +238,6 @@ public class Toasty {
         return success(context, context.getString(message), LENGTH_SHORT, true);
     }
 
-//    public static void success(@NonNull Context context, @StringRes int message) {
-//        success(context, context.getString(message), LENGTH_SHORT, true).show();
-//    }
-
     @CheckResult
     public static Toast success(@NonNull Context context, @NonNull CharSequence message) {
         return success(context, message, LENGTH_SHORT, true);
@@ -296,10 +271,6 @@ public class Toasty {
     public static Toast error(@NonNull Context context, @StringRes int message) {
         return error(context, context.getString(message), LENGTH_SHORT, true);
     }
-
-//    public static void error(@NonNull Context context, @StringRes int message) {
-//        error(context, context.getString(message), LENGTH_SHORT, true).show();
-//    }
 
     @CheckResult
     public static Toast error(@NonNull Context context, @NonNull CharSequence message) {
