@@ -1574,45 +1574,49 @@ public class StaggeredGridLayoutManager extends RecyclerView.LayoutManager imple
      * Checks whether it should invalidate span assignments in response to an adapter change.
      */
     private void handleUpdate(int positionStart, int itemCountOrToPosition, int cmd) {
-        int minPosition = mShouldReverseLayout ? getLastChildPosition() : getFirstChildPosition();
-        final int affectedRangeEnd; // exclusive
-        final int affectedRangeStart; // inclusive
+        try {
+            int minPosition = mShouldReverseLayout ? getLastChildPosition() : getFirstChildPosition();
+            final int affectedRangeEnd; // exclusive
+            final int affectedRangeStart; // inclusive
 
-        if (cmd == AdapterHelper.UpdateOp.MOVE) {
-            if (positionStart < itemCountOrToPosition) {
-                affectedRangeEnd = itemCountOrToPosition + 1;
-                affectedRangeStart = positionStart;
+            if (cmd == AdapterHelper.UpdateOp.MOVE) {
+                if (positionStart < itemCountOrToPosition) {
+                    affectedRangeEnd = itemCountOrToPosition + 1;
+                    affectedRangeStart = positionStart;
+                } else {
+                    affectedRangeEnd = positionStart + 1;
+                    affectedRangeStart = itemCountOrToPosition;
+                }
             } else {
-                affectedRangeEnd = positionStart + 1;
-                affectedRangeStart = itemCountOrToPosition;
+                affectedRangeStart = positionStart;
+                affectedRangeEnd = positionStart + itemCountOrToPosition;
             }
-        } else {
-            affectedRangeStart = positionStart;
-            affectedRangeEnd = positionStart + itemCountOrToPosition;
-        }
 
-        mLazySpanLookup.invalidateAfter(affectedRangeStart);
-        switch (cmd) {
-            case AdapterHelper.UpdateOp.ADD:
-                mLazySpanLookup.offsetForAddition(positionStart, itemCountOrToPosition);
-                break;
-            case AdapterHelper.UpdateOp.REMOVE:
-                mLazySpanLookup.offsetForRemoval(positionStart, itemCountOrToPosition);
-                break;
-            case AdapterHelper.UpdateOp.MOVE:
-                // TODO optimize
-                mLazySpanLookup.offsetForRemoval(positionStart, 1);
-                mLazySpanLookup.offsetForAddition(itemCountOrToPosition, 1);
-                break;
-        }
+            mLazySpanLookup.invalidateAfter(affectedRangeStart);
+            switch (cmd) {
+                case AdapterHelper.UpdateOp.ADD:
+                    mLazySpanLookup.offsetForAddition(positionStart, itemCountOrToPosition);
+                    break;
+                case AdapterHelper.UpdateOp.REMOVE:
+                    mLazySpanLookup.offsetForRemoval(positionStart, itemCountOrToPosition);
+                    break;
+                case AdapterHelper.UpdateOp.MOVE:
+                    // TODO optimize
+                    mLazySpanLookup.offsetForRemoval(positionStart, 1);
+                    mLazySpanLookup.offsetForAddition(itemCountOrToPosition, 1);
+                    break;
+            }
 
-        if (affectedRangeEnd <= minPosition) {
-            return;
-        }
+            if (affectedRangeEnd <= minPosition) {
+                return;
+            }
 
-        int maxPosition = mShouldReverseLayout ? getFirstChildPosition() : getLastChildPosition();
-        if (affectedRangeStart <= maxPosition) {
-            requestLayout();
+            int maxPosition = mShouldReverseLayout ? getFirstChildPosition() : getLastChildPosition();
+            if (affectedRangeStart <= maxPosition) {
+                requestLayout();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
