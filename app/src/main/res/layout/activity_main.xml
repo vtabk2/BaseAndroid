@@ -10,19 +10,19 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.gs.core.admob.natives.view.NativeGsAdView
+        <com.core.gsadmob.natives.view.NativeGsAdView
             android:id="@+id/nativeTest1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-<!--        <com.gs.core.admob.natives.view.NativeGsAdView-->
+<!--        <com.core.gsadmob.natives.view.NativeGsAdView-->
 <!--            android:id="@+id/nativeAlbum"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
 <!--            android:layout_marginTop="10dp"-->
 <!--            app:ads_mode="album"/>-->
 
-<!--        <com.gs.core.admob.natives.view.NativeGsAdView-->
+<!--        <com.core.gsadmob.natives.view.NativeGsAdView-->
 <!--            android:id="@+id/nativeFont"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
@@ -34,14 +34,14 @@
 <!--            android:layout_height="wrap_content"-->
 <!--            android:orientation="horizontal">-->
 
-<!--            <com.gs.core.admob.natives.view.NativeGsAdView-->
+<!--            <com.core.gsadmob.natives.view.NativeGsAdView-->
 <!--                android:id="@+id/nativeFrame1"-->
 <!--                android:layout_width="0dp"-->
 <!--                android:layout_height="wrap_content"-->
 <!--                android:layout_weight="1"-->
 <!--                app:ads_mode="frame"/>-->
 
-<!--            <com.gs.core.admob.natives.view.NativeGsAdView-->
+<!--            <com.core.gsadmob.natives.view.NativeGsAdView-->
 <!--                android:id="@+id/nativeFrame2"-->
 <!--                android:layout_width="0dp"-->
 <!--                android:layout_height="wrap_content"-->
@@ -49,34 +49,34 @@
 <!--                app:ads_mode="frame"/>-->
 <!--        </LinearLayout>-->
 
-<!--        <com.gs.core.admob.natives.view.NativeGsAdView-->
+<!--        <com.core.gsadmob.natives.view.NativeGsAdView-->
 <!--            android:id="@+id/nativeLanguage"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
 <!--            android:layout_marginTop="10dp"-->
 <!--            app:ads_mode="language"/>-->
 
-<!--        <com.gs.core.admob.natives.view.NativeGsAdView-->
+<!--        <com.core.gsadmob.natives.view.NativeGsAdView-->
 <!--            android:id="@+id/nativeShare"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
 <!--            android:layout_marginTop="10dp"/>-->
 
-<!--        <com.gs.core.admob.natives.view.NativeGsAdView-->
+<!--        <com.core.gsadmob.natives.view.NativeGsAdView-->
 <!--            android:id="@+id/nativeSticker"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
 <!--            android:layout_marginTop="10dp"-->
 <!--            app:ads_mode="sticker"/>-->
 
-<!--        <com.gs.core.admob.natives.view.NativeGsAdView-->
+<!--        <com.core.gsadmob.natives.view.NativeGsAdView-->
 <!--            android:id="@+id/nativeTemplate"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
 <!--            android:layout_marginTop="10dp"-->
 <!--            app:ads_mode="template"/>-->
 
-<!--        <com.gs.core.admob.natives.view.NativeGsAdView-->
+<!--        <com.core.gsadmob.natives.view.NativeGsAdView-->
 <!--            android:id="@+id/nativeCustom"-->
 <!--            style="@style/NativeTest"-->
 <!--            android:layout_width="match_parent"-->

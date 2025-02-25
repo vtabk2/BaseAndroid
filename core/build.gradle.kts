@@ -52,7 +52,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.transitionseverywhere)
 
+    implementation(libs.gscore)
     // admob
+    implementation(libs.gsadmob)
     implementation(libs.play.services.ads)
-    implementation(libs.shimmer)
 }

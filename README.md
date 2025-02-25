@@ -53,7 +53,7 @@ launchWhenResumed {
 - Tùy biến NativeAdView thì chọn ads_mode = custom
 
 ```css
-        <com.gs.core.admob.natives.view.NativeGsAdView
+        <com.core.gsadmob.natives.view.NativeGsAdView
             android:id="@+id/nativeCustom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -88,7 +88,7 @@ launchWhenResumed {
 - Cách 3:
 
 ```css
-        <com.gs.core.admob.natives.view.NativeGsAdView
+        <com.core.gsadmob.natives.view.NativeGsAdView
             android:id="@+id/nativeCustom"
             style="@style/NativeTest"
             android:layout_width="match_parent"

@@ -1,9 +1,9 @@
 package com.gs.test
 
 import android.os.Bundle
-import com.gs.core.admob.natives.AdsMode
-import com.gs.core.admob.natives.NativeUtils
-import com.gs.core.admob.natives.view.BaseNativeAdView
+import com.core.gsadmob.natives.AdsMode
+import com.core.gsadmob.natives.NativeUtils
+import com.core.gsadmob.natives.view.BaseNativeAdView
 import com.gs.core.ui.activity.BaseVMActivity
 import com.gs.test.databinding.ActivityMainBinding
 
