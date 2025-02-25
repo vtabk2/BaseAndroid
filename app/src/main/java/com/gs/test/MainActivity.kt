@@ -19,6 +19,7 @@ class MainActivity : BaseVMActivity<ActivityMainBinding>() {
 
     override fun initViews(savedInstanceState: Bundle?) {
         super.initViews(savedInstanceState)
+        TestApplication.applicationContext().initMobileAds()
 
 //        val builder = BaseNativeAdView.Builder().apply {
 //            adLayoutId = R.layout.ad_native_test
