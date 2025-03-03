@@ -11,7 +11,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.io.IOException
 import java.net.HttpURLConnection
+import java.net.InetSocketAddress
 import java.net.URL
 import java.util.concurrent.Callable
 import java.util.concurrent.ExecutionException
@@ -19,6 +21,7 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import java.util.concurrent.Future
 import java.util.concurrent.TimeUnit
+import javax.net.SocketFactory
 import javax.net.ssl.SSLHandshakeException
 
 object NetworkUtils {
@@ -67,7 +70,17 @@ object NetworkUtils {
                     httpURLConnection.connectTimeout = timeout
                     httpURLConnection.readTimeout = timeout
                     httpURLConnection.connect()
-                    httpURLConnection.responseCode == 200
+
+                    if (httpURLConnection.responseCode == 429) {// Too Many Requests
+                        try {
+                            SocketFactory.getDefault().createSocket()?.use { it.connect(InetSocketAddress("8.8.8.8", 53), timeout) } ?: false
+                            true
+                        } catch (e: IOException) {
+                            false
+                        }
+                    } else {
+                        httpURLConnection.responseCode == 200
+                    }
                 }
                 val future: Future<Boolean> = executor.submit(task)
                 val success = future.get(timeout.toLong(), TimeUnit.MILLISECONDS)
@@ -100,33 +113,7 @@ object NetworkUtils {
     fun hasInternetAccessCheck(
         doTask: () -> Unit, doException: (networkError: NetworkError) -> Unit, activity: Activity, timeout: Int = 1500
     ) {
-        CoroutineScope(Dispatchers.IO).launch {
-            val networkError = hasInternetAccess(activity, timeout)
-            val success = when (networkError) {
-                NetworkError.SUCCESS -> {
-                    true
-                }
-
-                NetworkError.TIMEOUT -> {
-                    false
-                }
-
-                NetworkError.SSL_HANDSHAKE -> {
-                    false
-                }
-
-                NetworkError.TURN_OFF -> {
-                    false
-                }
-            }
-            withContext(Dispatchers.Main) {
-                if (success) {
-                    doTask.invoke()
-                } else {
-                    doException.invoke(networkError)
-                }
-            }
-        }
+        hasInternetAccessCheck(doTask = doTask, doException = doException, context = activity, timeout = timeout)
     }
 
     fun hasInternetAccessCheck(
