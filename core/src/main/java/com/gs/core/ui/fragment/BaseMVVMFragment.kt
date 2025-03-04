@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 
-abstract class BaseVMFragment<B : ViewBinding> : Fragment() {
+abstract class BaseMVVMFragment<B : ViewBinding> : Fragment() {
     lateinit var bindingView: B
     abstract fun getViewBinding(): B
 

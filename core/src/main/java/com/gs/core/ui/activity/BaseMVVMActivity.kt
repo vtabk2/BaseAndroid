@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.viewbinding.ViewBinding
 
-abstract class BaseVMActivity<B : ViewBinding> : AppCompatActivity() {
+abstract class BaseMVVMActivity<B : ViewBinding> : AppCompatActivity() {
     lateinit var bindingView: B
     abstract fun getViewBinding(): B
     private var showSystemUi = true

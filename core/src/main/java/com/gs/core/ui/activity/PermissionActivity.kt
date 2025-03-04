@@ -6,7 +6,7 @@ import android.os.Build
 import androidx.core.content.ContextCompat
 import com.gs.core.databinding.ActivityPermissionBinding
 
-class PermissionActivity : BaseVMActivity<ActivityPermissionBinding>() {
+class PermissionActivity : BaseMVVMActivity<ActivityPermissionBinding>() {
 
     override fun getViewBinding(): ActivityPermissionBinding {
         return ActivityPermissionBinding.inflate(layoutInflater)

@@ -5,11 +5,11 @@ import android.util.Log
 import com.core.gsadmob.natives.AdsMode
 import com.core.gsadmob.natives.NativeUtils
 import com.core.gsadmob.natives.view.BaseNativeAdView
-import com.gs.core.ui.activity.BaseVMActivity
+import com.gs.core.ui.activity.BaseMVVMActivity
 import com.gs.core.utils.network.NetworkUtils
 import com.gs.test.databinding.ActivityMainBinding
 
-class MainActivity : BaseVMActivity<ActivityMainBinding>() {
+class MainActivity : BaseMVVMActivity<ActivityMainBinding>() {
 
     override fun getViewBinding(): ActivityMainBinding {
         return ActivityMainBinding.inflate(layoutInflater)
