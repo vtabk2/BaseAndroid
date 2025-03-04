@@ -15,7 +15,7 @@ dependencyResolutionManagement {
 **Step 2.** Add the dependency
 ```css
 dependencies {
-	        implementation 'com.github.vtabk2:BaseAndroid:1.1.1'
+	        implementation 'com.github.vtabk2:BaseAndroid:1.1.2'
 	}
 ```
 
