@@ -52,7 +52,9 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.transitionseverywhere)
 
-    implementation(libs.gscore)
+    api(libs.gscore)
+    api(libs.gsmvvm)
+
     // admob
     implementation(libs.play.services.ads)
 }

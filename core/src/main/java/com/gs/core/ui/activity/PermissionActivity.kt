@@ -4,9 +4,10 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.content.ContextCompat
+import com.core.gsmvvm.ui.activity.BaseMVVMActivity
 import com.gs.core.databinding.ActivityPermissionBinding
 
-class PermissionActivity : BaseVMActivity<ActivityPermissionBinding>() {
+class PermissionActivity : BaseMVVMActivity<ActivityPermissionBinding>() {
 
     override fun getViewBinding(): ActivityPermissionBinding {
         return ActivityPermissionBinding.inflate(layoutInflater)

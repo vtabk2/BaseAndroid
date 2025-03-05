@@ -45,7 +45,6 @@ dependencies {
 
     implementation(project(":core"))
 
-    implementation(libs.gscore)
     // admob
     implementation(libs.gsadmob)
     implementation(libs.play.services.ads)
