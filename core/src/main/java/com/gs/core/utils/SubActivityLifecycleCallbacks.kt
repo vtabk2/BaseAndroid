@@ -6,6 +6,7 @@ import android.os.Bundle
 
 open class SubActivityLifecycleCallbacks(
     private val callbackCreated: ((Activity) -> Unit)? = null,
+    private val callbackStart: ((Activity) -> Unit)? = null,
     private val callbackResumed: ((Activity) -> Unit)? = null
 ) : Application.ActivityLifecycleCallbacks {
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
@@ -13,7 +14,7 @@ open class SubActivityLifecycleCallbacks(
     }
 
     override fun onActivityStarted(activity: Activity) {
-        // no-op
+        callbackStart?.invoke(activity)
     }
 
     override fun onActivityResumed(activity: Activity) {
