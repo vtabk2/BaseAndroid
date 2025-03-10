@@ -44,7 +44,7 @@ publishing {
 }
 
 dependencies {
-    implementation(libs.androidx.multidex)
+    api(libs.androidx.multidex)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
