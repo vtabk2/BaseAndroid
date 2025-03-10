@@ -17,6 +17,10 @@ class TestApplication : GsApplication() {
         super.setupAdMob(BuildConfig.DEBUG)
     }
 
+    override fun initConfig() {
+
+    }
+
     companion object {
         @SuppressLint("StaticFieldLeak")
         private var instance: TestApplication? = null

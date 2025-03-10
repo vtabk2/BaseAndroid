@@ -28,6 +28,8 @@ abstract class GsApplication : MultiDexApplication() {
         setupAdMob(isDebug = false)
 
         setupLingver()
+
+        initConfig()
     }
 
     open fun fixWebView(packageName: String) {
@@ -61,6 +63,10 @@ abstract class GsApplication : MultiDexApplication() {
     }
 
     open fun setupDefaultStartApp() {}
+
+    open fun initConfig() {
+
+    }
 
     fun initMobileAds() {
         val backgroundScope = CoroutineScope(Dispatchers.IO)
