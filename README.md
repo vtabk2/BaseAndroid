@@ -17,7 +17,7 @@ Add it in your root build.gradle at the end of repositories:
         dependencies {
                     implementation 'com.github.vtabk2:BaseAndroid:1.1.8'
             }
-```.
+```
 
 **Hướng dẫn**
 
