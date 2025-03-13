@@ -15,9 +15,9 @@ Add it in your root build.gradle at the end of repositories:
 **Step 2.** Add the dependency
 ```css
         dependencies {
-                    implementation 'com.github.vtabk2:BaseAndroid:1.1.7'
+                    implementation 'com.github.vtabk2:BaseAndroid:1.1.8'
             }
-```
+```.
 
 **Hướng dẫn**
 

@@ -5,8 +5,8 @@ import android.util.Log
 import com.core.gsadmob.natives.AdsMode
 import com.core.gsadmob.natives.NativeUtils
 import com.core.gsadmob.natives.view.BaseNativeAdView
+import com.core.gscore.utils.network.NetworkUtils
 import com.core.gsmvvm.ui.activity.BaseMVVMActivity
-import com.gs.core.utils.network.NetworkUtils
 import com.gs.test.databinding.ActivityMainBinding
 
 class MainActivity : BaseMVVMActivity<ActivityMainBinding>() {
