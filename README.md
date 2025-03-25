@@ -15,9 +15,9 @@ Add it in your root build.gradle at the end of repositories:
 **Step 2.** Add the dependency
 ```css
         dependencies {
-                    implementation 'com.github.vtabk2:BaseAndroid:1.1.8'
+                    implementation 'com.github.vtabk2:BaseAndroid:1.1.9'
             }
-```.
+```
 
 **Hướng dẫn**
 
@@ -25,12 +25,12 @@ Add it in your root build.gradle at the end of repositories:
 
 ```css
           viewModel.listLiveData.observeUntil(owner = viewLifecycleOwner,
-          predicate = {
-          it.size > 0
-          },
-          observer = { list ->
-          if (list.isEmpty()) return@observeUntil
-          // load data list nhanh hơn  bằng cách load trước 1 ít
+              predicate = {
+              it.size > 0
+              },
+              observer = { list ->
+              if (list.isEmpty()) return@observeUntil
+              // load data list nhanh hơn  bằng cách load trước 1 ít
           )
 ```
 - LiveDataNetworkStatus : tác dụng kiểm tra sự thay đổi trạng thái kết nối mạng (tắt, bật mạng)
